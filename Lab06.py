@@ -10,8 +10,17 @@ def encode(password):  # function to encode password
     return encoded_password
 
 
-def decode(password):
-    pass
+def decode(password):  # function decodes password
+    decoded_password = ""  # creates open string for later addition of integers
+    for digit in password:
+        digit = int(digit)  # turns digit into digit for subtraction
+        digit -= 3  # removes encoded change by subtracting 3
+        if digit < 0:  # if number results in a negative number, add 10 to get original encoded digit (positive value)
+            digit += 10
+        digit = str(digit)  # turns back into string
+        decoded_password += digit  # adds digit in string form to decoded_ password string
+    return decoded_password
+print("hello")
 
 
 def main():
