@@ -20,7 +20,6 @@ def decode(password):  # function decodes password
         digit = str(digit)  # turns back into string
         decoded_password += digit  # adds digit in string form to decoded_ password string
     return decoded_password
-print("hello")
 
 
 def main():
