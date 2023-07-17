@@ -16,19 +16,19 @@ def decode(password):
 
 def main():
     while True:
-        print("Menu\n"
+        print("Menu\n"  # prints menu
               "-------------\n"
               "1. Encode\n"
               "2. Decode\n"
               "3. Quit\n")
-        option = int(input("Please enter an option: "))
+        option = int(input("Please enter an option: "))  # variable to store menu selection
         if option == 1:
-            encoded_password = encode(input("Please enter your password to encode: "))
+            encoded_password = encode(input("Please enter your password to encode: "))  # immediately encodes the input, and stores it as a variable
             print("Your password has been encoded and stored!\n")
         elif option == 2:
-            decoded_password = decode(encoded_password)
-            print(f"The encoded password is {encoded_password}, and the original is {decoded_password}.\n")
-        elif option == 3:
+            decoded_password = decode(encoded_password)  #  if option 2 is chosen, run decode function and store into variable
+            print(f"The encoded password is {encoded_password}, and the original is {decoded_password}.\n")  # f string print with respective variables
+        elif option == 3:  # quit program
             break
 
 
